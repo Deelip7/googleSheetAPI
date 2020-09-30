@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/Deelip7/googleSheetAPI#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
+    "google-spreadsheet": "^3.0.13",
     "googleapis": "^39.2.0"
   },
   "devDependencies": {
