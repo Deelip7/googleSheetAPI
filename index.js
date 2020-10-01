@@ -22,7 +22,7 @@ async function gsrun(cl) {
   const options = {
     spreadsheetId: SPREADSHEETID,
     range: "Sheet1!A2:F8",
-    majorDimension: "COLUMNS",
+    majorDimension: "ROWS",
   };
 
   let data = await gsapi.spreadsheets.values.get(options);
