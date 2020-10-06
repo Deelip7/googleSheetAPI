@@ -29,15 +29,23 @@ async function gsrun(cl) {
   projectContent(data);
 }
 
-function projectContent(data) {
-  console.clear();
+class Project {
+  constructor(title, description, tools, demo, git) {
+    this.title = title;
+    this.description = description;
+    this.tools = tools;
+    this.demo = demo;
+    this.git = git;
+  }
+}
 
+function projectContent(data) {
+  let proj1;
   data.data.values.forEach((el) => {
-    console.log(`Title: ${el[0]}`);
-    console.log(`Desc: ${el[1]}`);
-    console.log(`Tools: ${el[2]}`);
-    console.log(`Demo: ${el[3]}`);
-    console.log(`Git: ${el[4]}`);
-    console.log(`---------------------------------------------------------------`);
+    proj1 = new Project(el[0], el[1], el[2], el[3], el[4]);
+
+    const projectAPI = JSON.stringify(proj1);
+
+    console.log(projectAPI);
   });
 }
